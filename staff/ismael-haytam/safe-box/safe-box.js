@@ -1,19 +1,18 @@
-function SafeBox() {
-    
-    var secret
+var safeBox = {
 
-    this.saveSecret = function(secret, password) {
-        return function() {
-            return window.btoa(secret+password); 
-        }
-    }
+    saveSecret: function(secret, password) {
+        console.log('your secret was encrypted: ' + window.btoa(secret+password)); 
+        return this.retrieveSecret(secret);
+	},
 
-    this.retrieveSecret = function(password) {
-        return secret;
+    retrieveSecret: function(password) {
+        console.log(secret)
     }
 }
 
-var safeBox = new SafeBox();
 
-console.log(safeBox.saveSecret('Lorem ipsum dolor set amet', 'ismael-1995'));
-console.log(safeBox.retrieveSecret('ismael-1995'));
+safeBox.saveSecret('My new secret', 'ismael-1995');
+
+safeBox.retrieveSecret('ismael-1995');
+
+
