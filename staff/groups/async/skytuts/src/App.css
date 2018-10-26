@@ -2,7 +2,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #34ADFF;
   background-image: linear-gradient(80deg, white 50%, whiteSmoke 50%);
   font-family: "Roboto", sans-serif;
 }
@@ -30,7 +29,6 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   color: black;
-  color: #fff;
   padding: 20px 10px;
   cursor: pointer;
   transition: 0.2s;
@@ -61,8 +59,12 @@ nav ul li a:hover {
   object-fit: fill;
 }
 #search input {
-  height: 40px;
-  width: 380px;
+  height: 45px;
+  width: 450px;
+  background-image: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png");
+  background-position: 98% 9px;
+  background-size: 28px 28px;
+  background-repeat: no-repeat;
   padding-left: 20px;
   border-radius: 10px;
   border: 0;
@@ -155,11 +157,14 @@ nav ul li a:hover {
   padding-left: 20px;
 }
 .main .cards-container .card .card-top .card-info .title {
-  cursor: pointer;
   margin: 0;
+  font-size: 1.5em;
+  text-decoration: none;
+  cursor: pointer;
+  color: #7d97ad;
 }
 .main .cards-container .card .card-top .card-info .title:hover {
-  color: #7d97ad;
+  color: #01b3e3;
 }
 .main .cards-container .card .card-top .card-info .subtitle {
   margin: 0;
@@ -181,6 +186,11 @@ nav ul li a:hover {
   width: 20px;
   margin-right: 5px;
   margin-bottom: -3px;
+}
+
+.main .cards-container .card .card-middle a {
+  text-decoration: none;
+  color: #34ADFF;
 }
 
 .info {
@@ -209,6 +219,19 @@ nav ul li a:hover {
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
+<<<<<<< HEAD
+=======
+
+.info .header-info .star {
+  position: absolute;
+  top: 20px;
+  right: 180px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+}
+
+>>>>>>> ee2a111228e217b8ecd3339039d9a68ec4096170
 .info .header-info .course-img {
   width: 100%;
   height: 450px;
@@ -271,4 +294,228 @@ nav ul li a:hover {
   text-align: justify;
 }
 
+<<<<<<< HEAD
 /*# sourceMappingURL=App.css.map */
+=======
+.login-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-container .login-error-container {
+  margin: 30px 0;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: whiteSmoke;
+}
+
+.login-container .login-error-container .login-error-message {
+  color: red;
+  padding: 0 40px;
+}
+
+.login-container .login-title {
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.login-container .login-inputs {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.login-container .goto-register {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.login-container .goto-register a {
+  text-decoration: none;
+  color: #01b3e3;
+}
+
+.login-container .login-form .login-input {
+  width: 360px;
+  background: #fff;
+  color: #a3a3a3;
+  font: inherit;
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
+}
+
+.login-container .login-form .login-btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  background: #7f8ff4;
+  color: #fff;
+  -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 12px 36px;
+  margin-left: -96px;
+}
+
+.register-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10%;
+}
+
+.register-container .register-error-container {
+  margin: 30px 0;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: whiteSmoke;
+}
+
+.register-container .register-error-container .register-error-message {
+  color: red;
+  padding: 0 40px;
+}
+
+.register-container .register-title {
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.register-container .register-inputs {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.register-container .goto-login {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.register-container .goto-login a {
+  text-decoration: none;
+  color: #01b3e3;
+}
+
+.register-container .register-form .register-input {
+  width: 40%;
+  background: #fff;
+  color: #a3a3a3;
+  font: inherit;
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
+}
+
+.register-container .register-form .register-btn {
+  position: absolute;
+  display: inline-block;
+  background: transparent;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background: #7f8ff4;
+  color: #fff;
+  -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 12px 36px;
+  margin-top: -22px;
+  margin-left: -96px;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+}
+
+.popup .popup_inner {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  margin: auto;
+  background: white;
+  border-radius: 20px;
+}
+
+.popup .popup_inner h1 {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.popup .popup_inner .close-btn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  left: 94%;
+  top: 4%;
+}
+
+.popup .popup_inner .popuplogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.popup .popup_inner .popuplogin .popup-btn {
+  background: transparent;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background: #7f8ff4;
+  color: #fff;
+  -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  margin-top: 40px;
+  max-width: 170px;
+  min-width: 170px;
+  max-height: 90px;
+  min-height: 90px;
+  font-size: 1.5em;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=App.css.map */
+>>>>>>> ee2a111228e217b8ecd3339039d9a68ec4096170
