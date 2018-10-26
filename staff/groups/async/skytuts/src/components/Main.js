@@ -49,7 +49,7 @@ class Main extends Component {
     componentWillMount() {
         const data = JSON.parse(sessionStorage.getItem('courses'))
         if (data) {
-            this.setState({ 
+            this.setState({
                 courses: data.courses.slice(0, 6) || [],
                 tracks: data.tracks || [],
             })
@@ -74,9 +74,19 @@ class Main extends Component {
                     <section className="list-container">
 
                         {(this.state.tracks || []).map((track, index) => <span onClick={() => this.filterCoursesByTrack(track)} key={index}>{track.name}</span>)}
-                        <span onClick={() => this.filterCoursesByLevel('beginner')}>Beginner</span>
-                        <span onClick={() => this.filterCoursesByLevel('intermediate')}>Intermediate</span>
-                        <span onClick={() => this.filterCoursesByLevel('advanced')}>Advanced</span>
+                        <div className="toggle-panel">
+                            <form className="toggle-panel-form">
+                                <label className="switch">
+                                    <input type="checkbox" onClick={() => this.filterCoursesByLevel('beginner')}></input>
+                                    <span>Beginner</span><br></br></label>
+                                <input type="checkbox" onClick={() => this.filterCoursesByLevel('intermediate')}></input>
+                                <label className="switch">
+                                    <span>Intermediate</span><br></br></label>
+                                <label className="switch">
+                                    <input type="checkbox" onClick={() => this.filterCoursesByLevel('advanced')}></input>
+                                    <span>Advanced</span></label>
+                            </form>
+                        </div>
                         {this.state.error &&
                             <p>{this.state.error}</p>
                         }
